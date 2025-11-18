@@ -10,11 +10,11 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description(): 
     # teleop_keyboard
     teleop_keyboard = Node( 
-        package='teleop_twist_keyboard', 
-        executable='teleop_twist_keyboard', 
-        name='teleop_twist_keyboard', 
-        output='screen', 
-        prefix='xterm -e', 
+        package=    'teleop_twist_keyboard', 
+        executable= 'teleop_twist_keyboard', 
+        name=       'teleop_twist_keyboard', 
+        output=     'screen', 
+        prefix=     'xterm -e', 
         parameters=[ 
             {"use_sim_time": False}, 
             {'stamped': True},  
@@ -24,9 +24,9 @@ def generate_launch_description():
 
     # twist_stamper_node: navigation does not have time stamped
     twist_stamper_node = Node( 
-        package='twist_stamper', 
-        executable='twist_stamper', 
-        name='twist_stamper', 
+        package=    'twist_stamper', 
+        executable= 'twist_stamper', 
+        name=       'twist_stamper', 
         parameters=[ 
             {'frame_id': 'base_footprint'},  
             {"use_sim_time": False}, ],  
@@ -40,16 +40,16 @@ def generate_launch_description():
     # twist_mux_node: mixing keyboard and navigation
     twistmux_params = os.path.join(get_package_share_directory("rmitbot_navigation"), "config", "twistmux.yaml") 
     twistmux_node = Node( 
-        package='twist_mux', 
-        executable='twist_mux', 
-        name='twist_mux_node', 
-        output='screen', 
+        package=    'twist_mux', 
+        executable= 'twist_mux', 
+        name=       'twist_mux_node', 
+        output=     'screen', 
         parameters=[
             twistmux_params,  
             {"use_sim_time": False},
         ], 
         remappings=[ 
-            ('/cmd_vel_out', '/rmitbot_controller/cmd_vel')], 
+            ('cmd_vel_out', 'cmd_vel')], 
     ) 
 
     return LaunchDescription([ 

@@ -1,5 +1,6 @@
 /home/v120506/rmitbot_v4/lesson10_ws/install/rmitbot_navigation/share/rmitbot_navigation/launch/twistmux.launch.py
 /home/v120506/rmitbot_v4/lesson10_ws/install/rmitbot_navigation/share/rmitbot_navigation/launch/nav.launch.py
+/home/v120506/rmitbot_v4/lesson10_ws/install/rmitbot_navigation/share/rmitbot_navigation/config/nav2_params copy.yaml
 /home/v120506/rmitbot_v4/lesson10_ws/install/rmitbot_navigation/share/rmitbot_navigation/config/nav2_params.yaml
 /home/v120506/rmitbot_v4/lesson10_ws/install/rmitbot_navigation/share/rmitbot_navigation/config/twistmux.yaml
 /home/v120506/rmitbot_v4/lesson10_ws/install/rmitbot_navigation/share/ament_index/resource_index/package_run_dependencies/rmitbot_navigation
