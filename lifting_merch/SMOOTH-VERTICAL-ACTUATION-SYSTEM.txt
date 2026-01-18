@@ -1,0 +1,104 @@
+/* SMOOTH VERTICAL ACTUATION SYSTEM (SOFT START/STOP)
+   Hardware: JGB37 Motor + L298N Driver + Incremental Encoder
+*/
+
+#define CUSTOM_SETTINGS
+#define INCLUDE_GAMEPAD_MODULE
+#include <Dabble.h>
+
+// --- PIN DEFINITIONS ---
+const int enA = 10;   // PWM Speed Control
+const int in1 = 9;    // Direction Pin 1
+const int in2 = 8;    // Direction Pin 2
+
+// --- ENCODER CONFIGURATION ---
+const int encoderPinA = 2;
+const int encoderPinB = 3;
+volatile long encoderPos = 0;
+
+// --- MOTION PARAMETERS ---
+int maxSpeed = 255;   // Maximum PWM Duty Cycle
+int minSpeed = 80;    // Minimum threshold to overcome static friction
+int currentSpeed = 0; // Current operational speed
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(enA, OUTPUT); 
+  pinMode(in1, OUTPUT); 
+  pinMode(in2, OUTPUT);
+  
+  pinMode(encoderPinA, INPUT_PULLUP); 
+  pinMode(encoderPinB, INPUT_PULLUP);
+  
+  // High-resolution position tracking via hardware interrupts
+  attachInterrupt(digitalPinToInterrupt(encoderPinA), doEncoder, CHANGE);
+  
+  // Bluetooth Module Initialization (Pins 4 & 5)
+  Dabble.begin(9600, 4, 5); 
+}
+
+void loop() {
+  Dabble.processInput();
+
+  if (GamePad.isTrianglePressed()) { 
+    smoothLifting(); // Raise mechanism
+  }
+  else if (GamePad.isCrossPressed()) { 
+    smoothLowering(); // Lower mechanism
+  }
+  else {
+    smoothStop(); // Execute deceleration ramp
+  }
+  
+  // Real-time Telemetry for Serial Plotter
+  Serial.print("TargetSpeed:"); Serial.print(currentSpeed);
+  Serial.print(",");
+  Serial.print("Position:"); Serial.println(encoderPos);
+}
+
+// --- CORE ACTUATION FUNCTIONS ---
+
+void smoothLifting() {
+  // Logic: Incremental Velocity Ramping (Upward)
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  
+  if (currentSpeed < maxSpeed) {
+    currentSpeed += 2; // Incremental step
+    delay(5);          // Ramping interval for smoothness
+  }
+  analogWrite(enA, currentSpeed);
+}
+
+void smoothLowering() {
+  // Logic: Incremental Velocity Ramping (Downward)
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+
+  if (currentSpeed < maxSpeed) {
+    currentSpeed += 2;
+    delay(5);
+  }
+  analogWrite(enA, currentSpeed);
+}
+
+void smoothStop() {
+  // Logic: Controlled Deceleration (Soft Stop)
+  // Prevents mechanical shock and payload displacement
+  if (currentSpeed > 0) {
+    currentSpeed -= 5; // Rapid but smooth deceleration
+    delay(5);
+    analogWrite(enA, currentSpeed); 
+  } else {
+    currentSpeed = 0;
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    analogWrite(enA, 0);
+  }
+}
+
+void doEncoder() {
+  // Quadrature Encoder logic for direction-aware tracking
+  if (digitalRead(encoderPinA) == digitalRead(encoderPinB)) encoderPos++;
+  else encoderPos--;
+}
