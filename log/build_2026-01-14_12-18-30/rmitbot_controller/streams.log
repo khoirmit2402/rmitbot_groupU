@@ -1,0 +1,44 @@
+[0.038s] Invoking command in '/home/ntmkhoi/lesson10_ws/build/rmitbot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ntmkhoi/lesson10_ws/src/rmitbot_controller -DCMAKE_INSTALL_PREFIX=/home/ntmkhoi/lesson10_ws/install/rmitbot_controller
+[0.450s] -- The C compiler identification is GNU 13.3.0
+[0.715s] -- The CXX compiler identification is GNU 13.3.0
+[0.764s] -- Detecting C compiler ABI info
+[0.966s] -- Detecting C compiler ABI info - done
+[0.976s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.976s] -- Detecting C compile features
+[0.976s] -- Detecting C compile features - done
+[0.994s] -- Detecting CXX compiler ABI info
+[1.158s] -- Detecting CXX compiler ABI info - done
+[1.164s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.165s] -- Detecting CXX compile features
+[1.165s] -- Detecting CXX compile features - done
+[1.181s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.411s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.764s] -- Configuring done (1.6s)
+[1.764s] -- Generating done (0.0s)
+[1.766s] -- Build files have been written to: /home/ntmkhoi/lesson10_ws/build/rmitbot_controller
+[1.772s] Invoked command in '/home/ntmkhoi/lesson10_ws/build/rmitbot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ntmkhoi/lesson10_ws/src/rmitbot_controller -DCMAKE_INSTALL_PREFIX=/home/ntmkhoi/lesson10_ws/install/rmitbot_controller
+[1.773s] Invoking command in '/home/ntmkhoi/lesson10_ws/build/rmitbot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ntmkhoi/lesson10_ws/build/rmitbot_controller -- -j4 -l4
+[1.892s] Invoked command in '/home/ntmkhoi/lesson10_ws/build/rmitbot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ntmkhoi/lesson10_ws/build/rmitbot_controller -- -j4 -l4
+[1.894s] Invoking command in '/home/ntmkhoi/lesson10_ws/build/rmitbot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ntmkhoi/lesson10_ws/build/rmitbot_controller
+[1.909s] -- Install configuration: ""
+[1.909s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/launch
+[1.909s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/launch/teleopkeyboard.launch.py
+[1.911s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/launch/controller.launch.py
+[1.925s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/config
+[1.926s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/config/rmitbot_controller.yaml
+[1.927s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/ament_index/resource_index/package_run_dependencies/rmitbot_controller
+[1.927s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/ament_index/resource_index/parent_prefix_path/rmitbot_controller
+[1.928s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/environment/ament_prefix_path.sh
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/environment/ament_prefix_path.dsv
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/environment/path.sh
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/environment/path.dsv
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/local_setup.bash
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/local_setup.sh
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/local_setup.zsh
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/local_setup.dsv
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/package.dsv
+[1.929s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/ament_index/resource_index/packages/rmitbot_controller
+[1.930s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/cmake/rmitbot_controllerConfig.cmake
+[1.930s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/cmake/rmitbot_controllerConfig-version.cmake
+[1.930s] -- Installing: /home/ntmkhoi/lesson10_ws/install/rmitbot_controller/share/rmitbot_controller/package.xml
+[1.980s] Invoked command in '/home/ntmkhoi/lesson10_ws/build/rmitbot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ntmkhoi/lesson10_ws/build/rmitbot_controller

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/v120506/rmitbot_v4/lesson10_ws/src/rmitbot_mapping
+CMAKE_SOURCE_DIR = /home/ntmkhoi/lesson10_ws/src/rmitbot_mapping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/v120506/rmitbot_v4/lesson10_ws/build/rmitbot_mapping
+CMAKE_BINARY_DIR = /home/ntmkhoi/lesson10_ws/build/rmitbot_mapping
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/v120506/rmitbot_v4/lesson10_ws/build/rmitbot_mapping && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/v120506/rmitbot_v4/lesson10_ws/src/rmitbot_mapping /home/v120506/rmitbot_v4/lesson10_ws/src/rmitbot_mapping /home/v120506/rmitbot_v4/lesson10_ws/build/rmitbot_mapping /home/v120506/rmitbot_v4/lesson10_ws/build/rmitbot_mapping /home/v120506/rmitbot_v4/lesson10_ws/build/rmitbot_mapping/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ntmkhoi/lesson10_ws/build/rmitbot_mapping && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ntmkhoi/lesson10_ws/src/rmitbot_mapping /home/ntmkhoi/lesson10_ws/src/rmitbot_mapping /home/ntmkhoi/lesson10_ws/build/rmitbot_mapping /home/ntmkhoi/lesson10_ws/build/rmitbot_mapping /home/ntmkhoi/lesson10_ws/build/rmitbot_mapping/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 
